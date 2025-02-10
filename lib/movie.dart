@@ -19,7 +19,7 @@ class Movie {
       title: json['title'],
       overview: json['overview'],
       posterPath: json['poster_path'],
-      genres: List<String>.from(json['genres'].map((x) => x['name'])),
+      genres: List<String>.from(json['genre_ids'].map((x) => x.toString())), // Assuming genre_ids as integers
     );
   }
 }
